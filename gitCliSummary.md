@@ -133,7 +133,9 @@ Click on the Githu profile pic -> settings -> SSH and GPG keys -> New SSH key ->
    - **Commit the new codes (if the codes are essential)**
    - `git pull origin main`
 
-     _if the codes are not pushed after commit, There might be COFLICT and needed to be MERGED_
+     _if the codes are not pushed after commit, There might be COFLICT and needed to be MERGED._
+
+     > Merging Steps : **1.** After opening the conflict file in vs code, Remove the conflict markers (<<<<<<< HEAD, =======, >>>>>>>) and modify the content to reflect the final desired version **2.** `git add . ` **3.**`git commit -m "commit message"` **4**`git push origin main`
 
 ## 14. Cloning project from gitHub
 
