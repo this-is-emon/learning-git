@@ -119,7 +119,21 @@ Click on the Githu profile pic -> settings -> SSH and GPG keys -> New SSH key ->
 
 ## 13. Pull request in Own project
 
-- `*Update later`
+1. No changes in code is done in Local but some changes done in GitHub by you or other collaborators. Then you can pull directly :
+
+   - `git pull origin main`
+
+2. Some changes in code is done in Local but not comitted yet. But some changes done in GitHub by you or other collaborators :
+
+   - **Delete the Extra Codes(if the codes are not essential)**
+   - `git pull origin main`
+
+3. Some changes in code is done in Local but not comitted yet. But some changes done in GitHub by you or other collaborators :
+
+   - **Commit the new codes (if the codes are essential)**
+   - `git pull origin main`
+
+     _if the codes are not pushed after commit, There might be COFLICT and needed to be MERGED_
 
 ## 14. Cloning project from gitHub
 
