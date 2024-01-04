@@ -117,7 +117,7 @@ Click on the Githu profile pic -> settings -> SSH and GPG keys -> New SSH key ->
 
 \* _Now you can push directly_
 
-## 13. Pull request in Own project
+## 13. Pull from GitHub
 
 1. No changes in code is done in Local but some changes done in GitHub by you or other collaborators. Then you can pull directly :
 
@@ -137,7 +137,43 @@ Click on the Githu profile pic -> settings -> SSH and GPG keys -> New SSH key ->
 
      > Merging Steps : **1.** After opening the conflict file in vs code, Remove the conflict markers (<<<<<<< HEAD, =======, >>>>>>>) and modify the content to reflect the final desired version **2.** `git add . ` **3.**`git commit -m "commit message"` **4**`git push origin main`
 
-## 14. Cloning project from gitHub
+## 14. Sending pull request to our own project
+
+> **Scenario :** When a new feature needed to be developed, the collaborator create a new branch. Then he develop the feature and send a `pull request` to the Github repo. There is a person(Tech Lead) who is responsible to open any `pull request`, inspect it, send necessary instruction to the collaborator, if any further changes needed. At last if everything is ok he merge the new branch to the main branch. Here we will create a new baranch and send it as a `pull request` to our own project as a _collaborator_. Then we will also act as an _merger manager or Tech lead_, who will Open the `pull request`
+
+#### ➡ As a collaborator :
+
+- Making a new branch and getting into it :
+
+  `git checkout -b <new branch name>`
+
+- Modify necessary codes and add, commit :
+
+  `git add --all`
+
+  `git commit -m "<commit message>"`
+
+- Pushing the new branch into Github
+
+  `git push origin <new branch name>`
+
+#### ➡ As a tech-lead/ourself/particular collaborator :
+
+- Go to GitHub project, in the upper left side of project file listing, you will find all the branch including the new branch :
+
+  ![git brances](https://github.com/this-is-emon/learning-git/blob/main/gitBranch.png?raw=true)
+
+- A message "This branch is 1 commit ahead of main" will be seen. To accept it by the master go to _Contribute --> Open pull request_ button, click it and go to the next page :
+
+  ![Open pull request](https://github.com/this-is-emon/learning-git/blob/main/openPullRequest.png?raw=true)
+
+- In the next window we will see all the code modification with list. For creating a pull request we can make some comments as well. Then click the "Create pull request" button like the image below:
+
+  ![Create pull request](https://github.com/this-is-emon/learning-git/blob/main/createPullRequest.png?raw=true)
+
+- As a pull request is created in GitHub, in the next step a merge manager is responsible to check the **pull request tab** freqently. He then checks the newly created pull requests, accept or discard them.
+
+## 15. Cloning project from gitHub
 
 - `git clone <GitHub Repo URL> <Local Directory Name>`
 
