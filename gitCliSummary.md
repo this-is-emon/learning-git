@@ -1,4 +1,10 @@
-# 'Git and GitHub at a glance' by Junayed Ahmed
+# _'Git and GitHub at a glance' by Junayed Ahmed_
+
+# Topic 01 : Start
+
+- To be updated....
+
+# Topic 02 : Git
 
 ## 01. Git setup
 
@@ -89,6 +95,8 @@
 
 - `git push origin <branch name>`
 
+# Topic 03 : GitHub
+
 ## 12. SSH key setup
 
 #### 1. Checking if the key is exits:
@@ -139,7 +147,7 @@ Click on the Githu profile pic -> settings -> SSH and GPG keys -> New SSH key ->
 
 ## 14. Sending pull request to our own project
 
-> **Scenario :** When a new feature needed to be developed, the collaborator create a new branch. Then he develop the feature and send a `pull request` to the Github repo. There is a person(Tech Lead) who is responsible to open any `pull request`, inspect it, send necessary instruction to the collaborator, if any further changes needed. At last if everything is ok he merge the new branch to the main branch. Here we will create a new baranch and send it as a `pull request` to our own project as a _collaborator_. Then we will also act as an _merger manager or Tech lead_, who will Open the `pull request`
+> **Scenario :** When a new feature needed to be developed, the collaborator create a new branch. Then he develop the feature and send a `pull request` to the Github repo. There is a person(Tech Lead) who is responsible to open any `pull request`, inspect it, send necessary instruction to the collaborator, if any further changes needed. At last if everything is ok he merge the new branch to the main branch. Here we will create a new branch and send it as a `pull request` to our own project as a _collaborator_. Then we will also act as an _merger manager or Tech lead_, who will Open the `pull request`
 
 #### ➡ As a collaborator :
 
@@ -183,20 +191,13 @@ Click on the Githu profile pic -> settings -> SSH and GPG keys -> New SSH key ->
 
 1. Fork the project into our github account
 2. Clone the project from from our remote to local
+3. Make necessary changes in the code
+4. Add, Commit, push
+5. Send pull request to the project.
 
-\*Update later
+# Topic 04 : Contribution in Projects
 
-## 01. Git setup
-
-- `git --version`
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
-
-## 01. Git setup
+## 00. Searching Project
 
 - `git --version`
 - ``
@@ -206,7 +207,141 @@ Click on the Githu profile pic -> settings -> SSH and GPG keys -> New SSH key ->
 - ``
 - ``
 
-## 01. Git setup
+## 01. Forking Project
+
+- `git --version`
+- ``
+- ``
+- ``
+- ``
+- ``
+- ``
+
+## 02. Contribute
+
+- `git --version`
+- ``
+- ``
+- ``
+- ``
+- ``
+- ``
+
+## 03. Not done yet
+
+- `git --version`
+- ``
+- ``
+- ``
+- ``
+- ``
+- ``
+
+## 04. Celebrate
+
+- `git --version`
+- ``
+- ``
+- ``
+- ``
+- ``
+- ``
+
+# Topic 05 : Explore Git
+
+## 00. Git Restore
+
+- `git --version`
+- ``
+- ``
+- ``
+- ``
+- ``
+- ``
+
+## 01. Git Stash
+
+- `git --version`
+- ``
+- ``
+- ``
+- ``
+- ``
+- ``
+
+## 02. Git Reset
+
+- `git --version`
+- ``
+- ``
+- ``
+- ``
+- ``
+- ``
+
+## 03. Git Revert
+
+- `git --version`
+- ``
+- ``
+- ``
+- ``
+- ``
+- ``
+
+## 04. Git Rebase
+
+- `git --version`
+- ``
+- ``
+- ``
+- ``
+- ``
+- ``
+
+## 05. Git Squashing
+
+- `git --version`
+- ``
+- ``
+- ``
+- ``
+- ``
+- ``
+
+# Topic 06 : Others
+
+## 00. Will not use Github
+
+- `git --version`
+- ``
+- ``
+- ``
+- ``
+- ``
+- ``
+
+## 01. Will not use SSH in Github
+
+- `git --version`
+- ``
+- ``
+- ``
+- ``
+- ``
+- ``
+
+## 02. Github for students
+
+- `git --version`
+- ``
+- ``
+- ``
+- ``
+- ``
+- ``
+
+## 03. Something more
 
 - `git --version`
 - ``
