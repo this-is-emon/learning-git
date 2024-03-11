@@ -169,15 +169,15 @@ Click on the Githu profile pic -> settings -> SSH and GPG keys -> New SSH key ->
 
 - Go to GitHub project, in the upper left side of project file listing, you will find all the branch including the new branch :
 
-  ![git brances](https://github.com/this-is-emon/learning-git/blob/main/gitBranch.png?raw=true)
+  ![git brances](https://github.com/this-is-emon/learning-git/blob/main/images/gitBranch.png?raw=true)
 
 - A message "This branch is 1 commit ahead of main" will be seen. To accept it by the master go to _Contribute --> Open pull request_ button, click it and go to the next page :
 
-  ![Open pull request](https://github.com/this-is-emon/learning-git/blob/main/openPullRequest.png?raw=true)
+  ![Open pull request](https://github.com/this-is-emon/learning-git/blob/main/images/openPullRequest.png?raw=true)
 
 - In the next window we will see all the code modification with list. For creating a pull request we can make some comments as well. Then click the "Create pull request" button like the image below:
 
-  ![Create pull request](https://github.com/this-is-emon/learning-git/blob/main/createPullRequest.png?raw=true)
+  ![Create pull request](https://github.com/this-is-emon/learning-git/blob/main/images/createPullRequest.png?raw=true)
 
 - As a pull request is created in GitHub, in the next step a merge manager is responsible to check the **pull request tab** freqently. He then checks the newly created pull requests, accept or discard them.
 
@@ -309,44 +309,65 @@ Click on the Githu profile pic -> settings -> SSH and GPG keys -> New SSH key ->
 - ``
 - ``
 
-# Topic 06 : Others
+# **Topic 06** : _"Others"_
 
 ## 00. Will not use Github
 
-- `git --version`
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
+- You can use alternate 'Hosting provider', but basic of git functionality remain same. Links of hosting providers :
 
-## 01. Will not use SSH in Github
+1. [Bitbucket](https://bitbucket.org/)
+2. [GitLab](https://about.gitlab.com/)
 
-- `git --version`
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
+## 01. Do not want to use SSH in Github
+
+> **Scenario :** For some limited access to your git repo, like to `only read` codes of some `particular repo` from a `specified machine`
+
+- Go to `Github Settings` --> `Developer settings`
+
+  ![GitHub settings](https://github.com/this-is-emon/learning-git/blob/main/images/gitHubSettings.png?raw=true)
+  ![Developer Settings](https://github.com/this-is-emon/learning-git/blob/main/images/developerSettings.png?raw=true)
+
+- Then go to `Personal access tokens` --> `Fine-grained tokens`. Fine grained tokens provides more control for accessibilty.
+
+  ![Personal access tokens](https://github.com/this-is-emon/learning-git/blob/main/images/personalAccessTokens.png?raw=true)
+
+- Click on `Generate new tokens` button
+
+  ![Generate new tokens](https://github.com/this-is-emon/learning-git/blob/main/images/generateNewTokens.png?raw=true)
+
+- There will be many options after that, try to choose the option carfully. `Resource owner` describes user name or organaization name
+
+  ![Token Description](https://github.com/this-is-emon/learning-git/blob/main/images/tokenDescription.png?raw=true)
+
+- Scope of `Repository access` : আমরা এখােন Repository permissions এ জাস্ট উপরের
+  সিলক্টকৃত রিপোতে কন্টেন্টস(Contents) Read and write
+  অ্যাক্সেস দিয়েছি (এটা সেট করেল আেরকটা ফিল্ড(Metadata)
+  অটোই Read-only অ্যাক্সেস পেেয় যায়, যেহতুএটাও ম্যান্ডাটির)।
+  আর এই পারিমশনটাই আমােদরেক উক্ত রিপো থেকে পুল পুশ করেত পারমিশন দিবে।
+
+  ![Permissions](https://github.com/this-is-emon/learning-git/blob/main/images/permissionScope.png?raw=true)
+
+- Click on `Generate token` button in the Overview section :
+
+  ![Overview](https://github.com/this-is-emon/learning-git/blob/main/images/overViewScope.png?raw=true)
+
+- Save the `Genarated token` somewhere for future use, as Git provide this token for only one time.
+
+  ![Token](https://github.com/this-is-emon/learning-git/blob/main/images/generatedToken.png?raw=true)
+
+- Token is ready to use. But one thing to remember: ক্লোন করার সময় এখান থেকে SSH সিলেক্ট না কের HTTPS সিলেক্ট করে ক্লোন করেত হেব যেহেতু আমরা আর SSH ব্যবহার করছি না।
+
+  ![HTTPS Selection](https://github.com/this-is-emon/learning-git/blob/main/images/httpsSelection.png?raw=true)
 
 ## 02. Github for students
 
-- `git --version`
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
+- Click the link below to get the service for free! :
+
+  [GitHub Student Pack](https://education.github.com/pack)
 
 ## 03. Something more
 
-- `git --version`
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
+- Adding someone as a _Contributor_ in a Project :
+  `Settings` -> ` Collaborators` -> Give `userName` of the collaborator
+- Adding `README.md` in a project
+- Ignoring a file or folder using `.gitignore`
