@@ -251,63 +251,170 @@ Click on the Githu profile pic -> settings -> SSH and GPG keys -> New SSH key ->
 
 ## 00. Git Restore
 
-- `git --version`
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
+> **Scenario :** git restore কমান্ডটি মূলত আপনাকে কোন ফাইল বা
+> ডিরেক্টরীর আগের অবস্থায়(শেষ commit এর অবস্থায়) ফিরিয়ে নিতে
+> সাহায্য কের। এটা মূলত `লোকাল uncommitted` চেঞ্জেসগুলোেক
+> undo (পূর্বের অবস্থায় ফিরিয়ে নিতে সাহায্য) করে, অথবা `git add দিয়ে 
+Stagging` এ অ্যাড করা চেঞ্জেসগুলোেকে undo (পূর্বের অবস্থায় ফিরিয়ে নিতে সাহায্য) করতে ব্যবহার করা
+> যায়।
+
+- To restore changes of a local uncommited file
+
+  `git restore <file>`
+
+- To restore changes of a local uncommited directory
+
+  `git restore <directory>`
+
+- To restore all uncommited changes inside the repo
+
+  `git restore .`
+
+- For stagged uncommited changes we just need to add `--staged` keyword with the above instructions.
+
+  `git restore --staged <file> `
+
+  `git restore --staged <directory> `
+
+  `git restore --staged .`
 
 ## 01. Git Stash
 
-- `git --version`
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
+> **Scenario :** গিট স্ট্যাশ কমান্ডের সাহায্যে আপনি আপনার
+> করা অর্ধেক কাজটা(From one branch) একপাশে ফেলে রেখে অন্যান্য কাজ(to another branch ) করতে
+> পারবেন । তারপর আপনার সেই অন্য কাজ শেষ হলে আবার সেই পুরোনো(uncommitted)
+> কাজগুলো খুব সহেজই আরেকটা কমান্ড দিয়ে ফিরে পেয়ে যাবেন।
+
+- The command below omit all the **uncommitted** changes and store them in the **Stash Memory**. Eventually it will take you back to your last **commit state** :
+
+  `git stash`
+
+- The commad below will _'cut'_ all the stashed(uncommitted) changes from **Stash Memory** and _'paste'_ them in the local.
+
+  `git stash pop`
+
+  \*\* মনে রাখবেন এই pop কমান্ডটি আপনার সর্বশেষ স্ট্যাশ করা
+  কাজগুলোই ব্যাক করেব এবং স্ট্যাশ লিস্ট থেকেও এটাকে ক্লিয়ার
+  করে দিবে। তবে স্ট্যাশে যেহেতু আপনি একাধিক চেঞ্জেস রাখতে পারবেন, সেক্ষেত্রে pop দিতে থাকলে সবার শেষে অ্যাড করা চেঞ্জেসগুলো প্রথম হিসেবে পর্যায়ক্রমে আসতে থাকবে ।
+
+- If you want to _'copy'_ all the stashed(uncommitted) changes from **Stash Stack Memory** and _'paste'_ them in the local. As a result your changes will remain in the Stash as well as in the local.
+
+  `git stash apply`
+
+- To see all the changes in the stash in a **list**.
+
+  `git stash list`
+
+- To **Pop** or **apply** any particular item number of stash _"stash@{n}"_
+
+  `git stash pop stash@{3}`
+
+  `git stash apply stash@{1}`
+
+- To clear the **stash list**
+
+  `git stash clear`
+
+- To remove a specific item from stash
+
+  `git stash drop stash@{n}`
+
+- If you added a new **file** or **directory** after your last commit and want to stash it, then :
+
+  `git stash -u`
 
 ## 02. Git Reset
 
-- `git --version`
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
+- `git restore` or `git stash` are used for undo **uncomitted** changes. But to undo **comitted** changes, we use `git reset`.
+- To undo all changes that you made after an spcific commits :
+
+  `git reset <commit_id>`
+
+  \*\*এক্ষেত্রে আপনার উক্ত কমিটের পরবর্তী যে যে চেঞ্জেসগুলো ছিলো
+  সেগুলো আনকমিটেড অবস্থায় চলে যাবে । তবে আপনি যদি চান যে
+  উক্ত কমিটের পরবর্তী চেঞ্জেসগুলো একেবারেই চলে যাক তাহলে
+  উপরোক্ত কমান্ডটি এভাবে দিতে হবে :
+
+  `git reset <commit_id> --hard`
+
+- If you have **push** the 'commited codes' then it is not recommended to use the 'Git Reset' option. Because the other contributors might become confused on the missing commited code. On that scenario `git revert` command is more useful.
 
 ## 03. Git Revert
 
-- `git --version`
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
+- You have commit and pushed codes into the remote repo. But now want to remove some codes that pushed after a particular commit.
+
+  `git revert <commit_id>`
+
+  \*\*কমান্ডটি দেওয়ার পর কমিট ম্যাসেজ লিখার জন্য একটা প্রম্পট
+  আসবে, যেখানে আপনি চাইলে কাস্টম ম্যাসেজ দিতে পারেন অথবা
+  ডিফল্ট রেখেও **:wq (write & quite)** লিখে বেরিয়ে আসতে
+  পারেন ।
+
+- The main difference between `git reset` and `git revert` is that, `git revert` keep a trace of the **removed pushed codes** by making a 'new commit'. As the result other contributor can clearly see changes in the remote repo through this 'new commit'.
 
 ## 04. Git Rebase
 
-- `git --version`
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
+> **Scenario :** সাহির প্রোজেক্টে নতুন একটি ফিচার নিয়ে কাজ করবে, তাই সে
+> main ব্রাঞ্চ থেকে চেকআউট করে নতুন ফিচার ডেভলপেমন্ট এর
+> জন্য আরেকটা ব্রাঞ্চ feature ক্রিয়েট করলো। এখন সাহির তার
+> নতুন feature ব্রাঞ্চে নতুন ফিচার নিয়ে কাজ করছে, অল্প অল্প
+> করে কাজ করে সে তার কাজগুলোেক কমিটও করে যাচ্ছে। এরমধ্যে
+> ওয়াফি আবার মেইন প্রোডাকশন main ব্রাঞ্চে আরো নতুন কি ছু
+> কাজ যুক্ত করেছে । এখন এদিকে সাহিরও চাচ্ছে তার feature
+> ব্রাঞ্চেও যাতে main এর সেই নতুন কাজগুলো পাওয়া যায়। সেজন্য
+> সে কি করতে পারে?
+
+1. `git merge main` -- by being in the 'feature' branch
+
+   \*\*With the above command from **feature** branch the changes in the main branch creates a new commit with the new changes. So in the feature branch Sahir can see the changes along with the changes he made in the feature branch by `git log`. But commits both in 'main' and 'feature' branch makes the code messy.
+
+2. `git rebase` -- by being in the 'feature' branch
+
+   \*\*With the above command from **feature** branch,
+
+   ➡ First, Git finds a _'common commit'_ where codes of both _'main'_ and _'feature'_ are same.
+
+   ➡ Then all the new commits of the 'feature brach' is _'kept aside'_.
+
+   ➡ In the feature branch, _"all the new commits of the 'main' branch"_ is attached after the _'common commit'_ .
+
+   ➡ In the feature branch, _"all the 'kept aside' new commits of the 'feature' branch"_ are added with the _updated code base_ of the feature branch.
+
+- `git rebase` make the commits looks cleaner but reduce tracibility of the commits.
 
 ## 05. Git Squashing
 
-- `git --version`
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
+> **Scenario :** ওয়াফি প্রোজেক্টে নতুন একটি ফিচার নিয়ে কাজ করার চিন্তাভাবনা
+> করে , তাই সে তাদের প্রোডাকশন main ব্রাঞ্চ থেকে চেকআউট
+> করে নতুন আরেকটি ব্রাঞ্চ new-feature তৈরি করলো। এখন
+> সে এই নতুন ব্রাঞ্চে তার ডেভলপেমন্ট শুরু করলো। সে
+> ডেভলপেমন্ট শেষ করার পর সেটা সাহির এর সাথে শেয়ার করার
+> সিদ্ধান্ত নিলো যে , তারা এটা তােদর মেইন প্রোডাকশন main ব্রাঞ্চে মার্জ
+> করবে। এখন তারা খেয়াল করলো তার এই new-feature ব্রাঞ্চে
+> অনেকগুলো কমিট তৈরি করা হেয়েছ ডেভলপেমন্ট এর সময়, অথচ
+> ফিচারটা খুবই ছোটো একটা ফিচার। কমিট হিস্টোরিতে এতগুলো
+> ছোটো ছোটো কমিট থাকেল সেটা একটু আনক্লিন দেখা যেতে পারে।
+> এই অবস্থায় বেটার হয় যিদ new-feature ব্রাঞ্চের সব আপেডট
+> জাস্ট একটা কমিটের মাধ্যেমে মেইন main ব্রাঞ্চে আনা যায়। হ্যা!
+> ঠিক সেইম কাজটাই সম্ভব গিট স্কোয়ািশং এর সাহায্যে।
+
+- `git merge new-feature --squash` -- at _'main'_ branch
+
+  \*\* Here you are suashing all the commits of _'new-feature'_ into the _'main'_ branch.
+
+- Remember all the changes of the _'new-feature'_ branch will be staged into the _'main'_ branch after the above command. So, make another commit to add all the staged changes
+
+  `git commit -m “new feature introduced”`
+
+## 06. Differnce between `git rebase` & `git squash`
+
+- Follow the video below to see the differences:
+
+  [Git MERGE vs REBASE](https://www.youtube.com/watch?v=0chZFIZLR_0&t=199s)
+
+- The image below summarises pros and cons among _Git Merge_, _Git Rebase_, _Git Squash_.
+
+  ![Git-merge,rebase,squash](https://github.com/this-is-emon/learning-git/blob/main/images/mergeRebseSquash.png?raw=true)
 
 # **Topic 06** : _"Others"_
 
