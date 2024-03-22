@@ -121,7 +121,7 @@
 
 #### 6.Pasting the 'public key'(id_rsa.pub) in GitHub :
 
-Click on the Githu profile pic -> settings -> SSH and GPG keys -> New SSH key -> paste the key
+Click on the Github profile pic -> settings -> SSH and GPG keys -> New SSH key -> paste the key
 
 \* _Now you can push directly_
 
@@ -257,33 +257,48 @@ devsonket.github.io.git`_**devsonket**_
 
 - **Pull request handling of Contribution :**
 
-➡ এবার আপনার ফর্ক করা গিট্হাব রিপোজটরিতে গেলে দেখবেন উপরে কন্ট্রিবিউট করার জন্য আমন্ত্রণ জানান হচ্ছে :
-![]()
+  ➡ এবার আপনার ফর্ক করা গিট্হাব রিপোজটরিতে গেলে দেখবেন উপরে কন্ট্রিবিউট করার জন্য আমন্ত্রণ জানান হচ্ছে :
+  ![Pull request](https://github.com/this-is-emon/learning-git/blob/main/images/pullRequestWindow-1.png?raw=true)
+  \*\* যদি এরকম কোন নোটিশ নাও দেখেত পান তাহেলও সমস্যা নেই,
+  আপনি জাস্ট আপনার ব্রাঞ্চে সুইচ করবেন এখান থেকে :
+  ![pull request](https://github.com/this-is-emon/learning-git/blob/main/images/pullRequestWindow-2.png?raw=true)
 
-- ``
-- ``
-- ``
-- ``
+  ➡ সুইচ করার পর দেখবেন উপরের দিকে এরকম আপনার ব্রাঞ্চ একটা
+  কমিট বা আপনি যে কয়টা কমিট কেরেছিলেন তত কিমিট এগিয়ে আছ
+  মূল ব্রাঞ্চ থেকে এমন একটা লেখা এবং এর পাশেই কন্ট্রিবিউট করার
+  বাটনটা দেখা যাচ্ছে, এবার এই কন্ট্রিবিউট বাটনটাই ব্যবহার করে আমরা মূল প্রোজেক্টে কন্ট্রিবিউট করব :
+
+  ![Commit Ahead](https://github.com/this-is-emon/learning-git/blob/main/images/commitAhead.png?raw=true)
+  ![Pull request button](https://github.com/this-is-emon/learning-git/blob/main/images/contributeButton.png?raw=true)
+
+  ➡ Open pull request এ ক্লিক করার পর এবার আমােদর পুল
+  রিকোয়েস্ট তৈরি করার জন্য বিস্তারিত একটা পেজ এ নিয়ে যাব।
+  এখন আপনি আপনার কন্ট্রিবিউশন অনুযায়ী টাইটেল(পুল
+  রিকোয়েস্টে একটা মাত্র কমিট থাকলে বাই ডিফল্ট সেই কমিট
+  ম্যাসেজই টাইেটল ফিল্ডে দেখাবে) দিবেন আর সাথে কি ছু
+  বর্ণনা(Description):
+  ![Create Pull request button](https://github.com/this-is-emon/learning-git/blob/main/images/createPullRequestButton.png?raw=true)
+
+  ➡ এবার Create pull request বাটনে ক্লিক কের পুল রিকোয়েস্ট
+  তৈরি করে ফেলুন। ব্যাস হেয় গেলো আপনার অন্য একটা প্রোজেক্টে
+  পুল রিকোয়েস্ট তৈরি :
+  ![Pull request done](https://github.com/this-is-emon/learning-git/blob/main/images/pullRequestDone.png?raw=true)
 
 ## 03. Not done yet
 
-- `git --version`
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
+> > তবে এখন আপনি জাস্ট পুল রিকোয়েস্ট তৈরি কেরেছন, অর্থাৎ
+> > আপনি উক্ত রিপোজোটরির মেইন্টেইনারেদর কাছে রিকোয়েস্ট
+> > করেছেন আপনার পরবর্তনগুলো প্রোজক্টে অ্যাড করার জন্য। এখন
+> > রিভউয়াররা আপনার পিরবর্তন রিভউ করে উপযুক্ত মনে হলে সেটা
+> > মার্জ করবে । আর যদি উপযুক্ত বা কিছু মডিফাই করার প্রয়োজন মনে
+> > করে তাহলে আপনাকে চেঞ্জ রিকোয়েস্ট দিতে পারে । আপনি জাস্ট
+> > লোকালি আপনার কাঙ্ক্ষিত সেইম ব্রাঞ্চেই পিরবর্তনগুলো করে কমিট
+> > করে গিটহাব পুশ দিলেই অটোম্যাটিক পুল রিকোয়েস্ট আপডেট হয়ে
+> > যাবে। এর জন্য আবার শুরু থেকে সবিকছু করতে হবে না
 
 ## 04. Celebrate
 
-- `git --version`
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
+- Nothing to be noted
 
 # Topic 05 : Explore Git
 
