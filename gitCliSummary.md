@@ -199,29 +199,67 @@ Click on the Githu profile pic -> settings -> SSH and GPG keys -> New SSH key ->
 
 ## 00. Searching Project
 
-- `git --version`
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
+- `Nothing to Note-down`
 
 ## 01. Forking Project
 
-- `git --version`
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
+- To contribute in a GitHub project you need to fork the project by pressing the **'Fork'** button of that project. As a result a new copy of the project will be created in your GitHub account.
+  ![Forking a project](https://github.com/this-is-emon/learning-git/blob/main/images/forkingProject.png?raw=true)
+- তো ফর্ক বাটেন ক্লিক করলে কোথায়(Owner) ফর্ক করেবন, কি নামে করবেন এরকম কিছু তথ্য চাইতে পারে। চাইলে কিছু তথ্য পরিবর্তন করতে পারেন, অথবা এভাবেই Create Fork বাটনে ক্লিক করতে পারেন।
+  ![Create fork](https://github.com/this-is-emon/learning-git/blob/main/images/createFork.png?raw=true)
 
 ## 02. Contribute
 
-- `git --version`
-- ``
-- ``
+- **Cloning :** Now to as the project is in your remote repo, to contribute you need to clone the repo from your _'remote repo'_ to _'local repo'_ .
+
+  ➡ First make sure you are cloning the correct repo by checking the url of the project :
+  ![Checking URL](https://github.com/this-is-emon/learning-git/blob/main/images/checkingUrl.png?raw=true)
+
+  ➡ Then cloning the project into local, copy the SSH/HTTPS link :
+  ![Cloning project](https://github.com/this-is-emon/learning-git/blob/main/images/cloningForkedRepo.png?raw=true)
+
+  ➡ Write the follwoing command in CLI
+
+  `git clone git@github.com:zonayedpcadotcom/ 
+devsonket.github.io.`_**gitdevsonket.github.io.git**_
+
+  \*\*এটা এখন আপনার লোকালে আপনার রিপোজটিরর নাম অনুযায়ী
+  ডিরক্টিরতে প্রোজেক্টটা ক্লোন করবে, এখানে যেটা হচ্ছে
+  _devsonket.github.io_। তবে আপনি এ নাম ছাড়া যদি আপনার
+  মনমতো নাম(ধরেন এখন শুধু _devsonket_) দিতে চান তাহলে
+  এভাবে কমান্ড দিতে হবে :
+
+  `git clone git@github.com:zonayedpcadotcom/ 
+devsonket.github.io.git`_**devsonket**_
+
+- **Contribution time!! :** let's say we make a new branch and make necessary changes through that branch :
+
+  ➡ এবার আমরা প্রোজেক্টের ডিরেক্টরির ভিতরে c d <YOUR_DIR_NAME> গিয়ে নতুন একটা ব্রাঞ্চ astro-typo-fix নাম তৈরি করে সেটাতে চেকআউট করব। এখানে আপনি
+  আপনার মনমতো ব্রাঞ্চের নাম দিতে পারেন। কোন সমস্যা নেই :
+
+  `git checkout -b astro-typo-fix `
+
+  `git status` -- to check a clean working directory
+
+  ➡ Say we want to make changes in the _/data/astrojs.json_ directory. So we go there and make changes :
+  ![Before fixing](https://github.com/this-is-emon/learning-git/blob/main/images/beforeFixing.png?raw=true)
+  ![After fixing](https://github.com/this-is-emon/learning-git/blob/main/images/afterFixing.png?raw=true)
+
+  `git status` / `git diff` -- to check the changes
+
+  ➡ Add - Commit - Push to our **Forked Repo** :
+
+  `git add --all`
+
+  `git commit -m "astrojs typo fix"`
+
+  `git push origin astro-typo-fix`
+
+- **Pull request handling of Contribution :**
+
+➡ এবার আপনার ফর্ক করা গিট্হাব রিপোজটরিতে গেলে দেখবেন উপরে কন্ট্রিবিউট করার জন্য আমন্ত্রণ জানান হচ্ছে :
+![]()
+
 - ``
 - ``
 - ``
@@ -408,7 +446,7 @@ Stagging` এ অ্যাড করা চেঞ্জেসগুলোেক�
 
 ## 06. Differnce between `git rebase` & `git squash`
 
-- Follow the video below to see the differences:
+- Follow the video below to see the differences :
 
   [Git MERGE vs REBASE](https://www.youtube.com/watch?v=0chZFIZLR_0&t=199s)
 
